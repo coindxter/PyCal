@@ -1,28 +1,11 @@
-import addition
+from addition import additionMode
+from typing import clearScreen, typingInput, typingPrint
 
 import os
 import sys
 import time
 
 PIE = 3.14159265359
-
-def typingPrint(text):
-  for character in text:
-    sys.stdout.write(character)
-    sys.stdout.flush()
-    time.sleep(0.05)
-  
-def typingInput(text):
-  for character in text:
-    sys.stdout.write(character)
-    sys.stdout.flush()
-    time.sleep(0.05)
-  value = input()  
-  return value
-
-def clearScreen():
-  os.system("clear")
-
 
 #-----------------------------------------------------------------
 def printMenu():
@@ -45,10 +28,9 @@ def SubtractionMode():
     print('%s - %s = %s ' % (num1, num2, real_answer))
 #-----------------------------------------------------------------
 
-
+clearScreen()
 typingPrint('Welcome User\n')
 time.sleep(1.5)
-print('')
 Val = True
 while Val:  
 
@@ -57,7 +39,8 @@ while Val:
   act = typingInput('Chose an action above:  ')
   print(' ')
   if act == '1':
-    addition.additionMode()
+    clearScreen()
+    additionMode()
   if act == '2' :
     SubtractionMode()
   if act == '3' :

@@ -1,23 +1,5 @@
-import os
-import sys
+from typing import typingInput, typingPrint, clearScreen
 import time
-
-def typingPrint(text):
-  for character in text:
-    sys.stdout.write(character)
-    sys.stdout.flush()
-    time.sleep(0.05)
-  
-def typingInput(text):
-  for character in text:
-    sys.stdout.write(character)
-    sys.stdout.flush()
-    time.sleep(0.05)
-  value = input()  
-  return value
-
-def clearScreen():
-  os.system("cls")
 
 def additionMode():
   while True:  

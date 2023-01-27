@@ -1,5 +1,6 @@
 import os
 import sys
+import time
 
 def typingPrint(text):
   for character in text:
@@ -16,4 +17,4 @@ def typingInput(text):
   return value
 
 def clearScreen():
-  os.system("clear")
+  os.system("cls")
