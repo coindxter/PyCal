@@ -41,27 +41,5 @@ while Val:
   if act == '1':
     clearScreen()
     additionMode()
-  if act == '2' :
-    SubtractionMode()
-  if act == '3' :
-    MultiplcationMode()
-  if act == '4' :
-    DivsionMode()
-  if act == '5' :
-    SquareMode()
-  if act == '6' :
-    PythagoreanMode()
-  if act == '7' :
-    SquareRootMode()
-  if act == '8' :
-    circleMode()
-  if act == '9' :
-    Powered()
-  if act == '10' :
-    percent()
-  if act == 'help' or act == 'Help' :
-    Help()
-  if act == 'quit' or act == 'stop' :
-    clearScreen()
+  if act == 'stop':
     Val = False
-  
