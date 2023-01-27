@@ -1,13 +1,21 @@
 from typing import typingInput, typingPrint, clearScreen
 import time
 
-def SubtractionMode():
+def subtractionMode():
   while True:
-    num1=input('Enter a number:   ' )
-    if num1 == 'back' :
+    print('Mode: Subtraction')
+    print(' ')
+    num1 = typingInput('Enter a number: ' )
+    if num1 == 'back' or num1 == 'menu':
+      clearScreen()
       return
-    num2=input('Enter a number:   ' )
+    num2= typingInput('Enter a number: ' )
+    if num1 == 'back' or num1 == 'menu':
+      clearScreen()
+      return
     real_answer = float(num1) - float(num2)
     print(' ')
     time.sleep(1)
-    print('%s - %s = %s ' % (num1, num2, real_answer))
+    print('%s - %s = %s' % (num1, num2, real_answer))
+    time.sleep(2)
+    clearScreen()

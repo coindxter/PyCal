@@ -3,18 +3,19 @@ import time
 
 def additionMode():
   while True:  
-    print("Mode: Addition")
-    print(" ")
+    print('Mode: Addition')
+    print(' ')
     num1 = typingInput('Enter a number: ' )
-    if num1 == 'back':
+    if num1 == 'back' or num1 == 'menu':
       clearScreen()
       return
     num2= typingInput('Enter a number: ' )
-    if num2 == 'back':
+    if num2 == 'back' or num1 == 'menu':
+      clearScreen()
       return
     real_answer = float(num1) + float(num2)
     print(' ')
     time.sleep(1)
-    print('%s + %s = %s' % (num1, num2, real_answer))
+    typingPrint('%s + %s = %s' % (num1, num2, real_answer))
     time.sleep(2)
     clearScreen()
