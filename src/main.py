@@ -1,6 +1,7 @@
 from addition import additionMode
 from subtraction import subtractionMode
 from typing import clearScreen, typingInput, typingPrint
+from history import historyMode
 
 import os
 import sys
@@ -14,7 +15,7 @@ def printMenu():
   typingPrint('Menu\n')
   typingPrint('--------------')
   print(' ')
-  print('1.Addition\n2.Subtraction\n3.Multiplcation\n4.Divsion\n5.Squared\n6.Pythagorean Theorem \n7.Square Root\n8.Area of a Circle\n9.Powered\n10.Percentage\n------Quit------\n------Help------')
+  print('1.Addition\n2.Subtraction\n------Quit------\n------Help------\n-----History----')
 #-----------------------------------------------------------------
 
 clearScreen()
@@ -26,7 +27,7 @@ while Val:
 
   printMenu()
   print(' ')
-  act = typingInput('Chose an action above:  ')
+  act = typingInput('Choose an action above: ')
   print(' ')
   if act == '1':
     clearScreen()
@@ -34,5 +35,12 @@ while Val:
   if act == '2':
     clearScreen()
     subtractionMode()
-  if act == 'stop':
+  if act == 'stop' or act == 'quit':
+    clearScreen()
     Val = False
+  if act == 'history':
+    clearScreen()
+    historyMode()
+        
+
+

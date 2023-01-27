@@ -1,6 +1,8 @@
 from typing import typingInput, typingPrint, clearScreen
 import time
 
+history = []
+
 def additionMode():
   while True:  
     print('Mode: Addition')
@@ -14,8 +16,13 @@ def additionMode():
       clearScreen()
       return
     real_answer = float(num1) + float(num2)
+    history.append("%s + %s = %s" % (num1, num2, real_answer))
+    with open("calHistory.py", "a") as f:
+            for i, calc in enumerate(history):
+                f.write(calc + "\n")
     print(' ')
     time.sleep(1)
     typingPrint('%s + %s = %s' % (num1, num2, real_answer))
     time.sleep(2)
     clearScreen()
+   
