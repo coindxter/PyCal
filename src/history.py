@@ -12,7 +12,9 @@ def historyMode():
         if act == '1':
             f = open('calHistory.py', 'w')
             clearScreen()
-            return
         if act == '2':
+            clearScreen()
+            return
+        if act == 'back' or act == 'Back':
             clearScreen()
             return
